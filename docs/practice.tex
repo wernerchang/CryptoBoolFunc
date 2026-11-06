@@ -1,0 +1,77 @@
+\section{第四步：先运行一个能核对的数值实例}
+\subsection{MM：验证本机计算链路}
+以下命令在CryptoBoolFunc仓库根执行。它不调用收费模型API，也不需要把原书上传到网络：
+\begin{code}
+New-Item -ItemType Directory -Path output -Force | Out-Null
+$tool = 'skills/mmhs-cryptographic-function-design/resources/math_tool.py'
+python $tool mm --input examples/mm.json --output output/mm-result.json
+$r = Get-Content output/mm-result.json -Raw | ConvertFrom-Json
+$r.status
+$r.metrics.nonlinearity
+$r.metrics.balanced
+$r.metrics.sac
+\end{code}
+应依次看到ok、4、True及4个True。样例的输入为k=3、选择器系数3与4、常数项1与0，得到4变量函数。不要将输入选择器长度2误解为2位选择器。工具采用整数bit i表示第i输入/输出坐标，原书其他排表方式须先换坐标再对比。
+
+\subsection{多输出：必须检查所有非零组合}
+\begin{code}
+python $tool ds --input examples/ds.json --output output/ds-result.json
+$r = Get-Content output/ds-result.json -Raw | ConvertFrom-Json
+$r.metrics.component_count
+$r.metrics.min_nonlinearity
+$r.metrics.balanced
+\end{code}
+应看到7、240、True。因为m=3，需要检查7个非零输出组合。\file{min_nonlinearity} 是最坏分量非线性度，\file{min_degree} 与 \file{max_degree} 分别报告两个次数口径。本版DS只实现经过复核的 \(R_z=I\) 子族；指定自定义R会拒绝。一般可逆R分支已发现反例，不能因为示例跑通而恢复其一般结论。
+
+\subsection{校正器与阵列例}
+\begin{code}
+python $tool corrector --input examples/corrector.json --output output/corrector.json
+python $tool d-array --input examples/d-array.json --output output/d-array.json
+\end{code}
+双码校正器应报告最小非线性度448、最小次数4、整体校正阶4。它要求输入位统计独立且具有相同偏差；若模型条件改变，不能沿用相同保证。阵列例固定多项式37，即 \(x^5+x^2+1\)，合法行数应为10；换为已核查的另一表示47时可为11。容量要连同多项式、基和列选择一起记录。
+
+\section{第五步：让宿主按卡执行，而非只口头解释}
+在已打开正确工作区的宿主会话中提交：
+\begin{code}
+请使用mmhs-cryptographic-function-design中的mm-spectrum卡。
+输入取examples/mm.json。
+先列合法性条件，再运行资源程序，把输出写到output/mm-session.json。
+报告实际命令、退出码、完整表、Walsh谱、非线性度与SAC。
+区分原书结论、本文重建和本次有限实例；不要扩大为一般最优。
+\end{code}
+成功标准有四项：读取正确卡；实际运行命令；输出文件存在且可解析；数值与前面手工验收一致。宿主如果需要权限批准，应核对具体命令和输出路径。API失败、文件权限失败与数学条件不满足是三种不同失败，应分别记录。
+
+再做一次边界验收：把MM输入的phi改成重复值，例如[1,1]，使用另一个输入文件运行。工具应返回error且退出码2，不能继续报告单射构造成功。无论哪个宿主，“明确拒绝非法输入”都是必要行为。
+
+\section{第六步：从新材料重新使用仓颉蒸馏}
+如果只是使用本版15项方法，不必重新蒸馏。若要扩展到新论文、另一份书稿或新章节，将合法持有的PDF留在本机 \file{local-source} 中，向宿主给出真实路径和目标。例如：
+\begin{code}
+请使用cangjie-skill处理local-source/my-paper.pdf。
+目标：服务新型布尔函数/多输出函数的设计。
+先建立章节/构造/定理依赖图，重点拆构造思想、参数限制和证明步骤。
+每条候选定位到页码与公式；一般证明缺口、开放问题及数表冲突要隔离。
+保存日志，先交整书/整文骨架，不凭记忆补造原文。
+\end{code}
+仓颉大致经历：整书理解、五类提取、三重验证、独立入口晋级、RIA能力卡、关联与词典、压力测试、确定性编译\cite{cangjie}。用户在阶段门审阅的是具体结果，不是用确认代替来源验证。一次只做一个内容试点；中断后读取状态文件续跑，不必重复已经核查的材料。
+
+要求每项构造输出四类证书：\textbf{输入契约}（域/基/位序/维数）、\textbf{生成结果}（真值表或确定性生成器）、\textbf{证明链}（局部谱到整体指标的每一步）、\textbf{计算范围}（哪些参数实测、哪些只属一般推导）。未被完整支持的内容进入待核库，不能为了增加卡数量而包装成active方法。
+
+\section{读懂第一版的验证报告}
+本版正常任务15/15完成、边界语义15/15，路由18/18；原严格字段断言28/30。两处error与not\_applicable状态名差异仍计严格不匹配，不能把“数学上正确拒绝”写成“所有字段断言通过”。单次对照也不是统计显著提升的证明。
+
+第一版编号1.0.0是可追溯快照名，保留研究试用属性。尚未解决一般DC存在性、完整HML/FAI求解器、混合阵列一般精确界，也不保证所有密码攻击指标。源书并未随公共仓库分发，出处和来源哈希保留用于审计。
+
+\section{把安装与研究过程写成日志}
+建议每次实验保存如下记录，而不是只保存模型对话：
+\begin{code}
+version: 1.0.0
+host: Codex or DeepSeek Harness
+input: examples/mm.json
+skill: mm-spectrum
+domain_and_basis: explicit
+command_and_exit_code: recorded
+observed_metrics: from output JSON
+proof_scope: instance / family / lower bound
+unverified_items: explicit list
+\end{code}
+日志不能包含API key。输出文件内容与模型摘要冲突时，先复算程序和输入；不要为了让两者一致而手工改指标。修改算法后至少重跑相关正常例和边界例，再生成新版本。

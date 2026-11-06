@@ -1,0 +1,368 @@
+{
+  "version": "1.0.0",
+  "edition": "第一版",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 148,
+      "sha256": "9977ca1dd2437c467ae32f3e2d625095dabef8b7c596d7b1d3911fc55888788b"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 675,
+      "sha256": "b7f52891bb3e4b81e3904ea081df5cf5ca26cdf2f656035070f4cf166468d1f0"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 443,
+      "sha256": "fbdd770018503285455520a4398e40e86f071ccfa038ce7db997f82e9a1bf7dc"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 613,
+      "sha256": "c1f0fa60e8a5306cd5d6a95a71dc56133473b100b055b4bf7dfa92ae9f145343"
+    },
+    {
+      "path": "CONTRIBUTORS.md",
+      "bytes": 1014,
+      "sha256": "3a589431b5a21b54c82c1ab81062afc2ecfd6b3335d9dd306dda2ab2c4e4dd86"
+    },
+    {
+      "path": "docs/closing.tex",
+      "bytes": 5934,
+      "sha256": "eb79a125ffa0626c15b9e7f8b31c2b801f7f50c3f561efa604116fa1f7dc7b9a"
+    },
+    {
+      "path": "docs/practice.tex",
+      "bytes": 5869,
+      "sha256": "e44e844f1939a080e01a1682456f3994f67a4bec8df737e8efb0d158c4dada20"
+    },
+    {
+      "path": "docs/preamble.tex",
+      "bytes": 1700,
+      "sha256": "81766c4dd5b02fc678c25c219a81040c8739352800e03ec16f6496dfb9696a35"
+    },
+    {
+      "path": "docs/research/BOOK_OVERVIEW.md",
+      "bytes": 22316,
+      "sha256": "a64858cfd44afba165eff38d3fda716c5723aa15b3ec23b0656637eb5c74952c"
+    },
+    {
+      "path": "docs/research/coverage-audit.md",
+      "bytes": 4050,
+      "sha256": "bb8aa582e4b0a6434b4afd3129d53f20ace734f59cabec6b1c9187771445ea4e"
+    },
+    {
+      "path": "docs/research/DIGEST.md",
+      "bytes": 19168,
+      "sha256": "d11f44825433ab6fec0eff342866f68fc1c51e764b60815b50458bf1dcd7c057"
+    },
+    {
+      "path": "docs/research/DISTILLATION_PLAN.md",
+      "bytes": 10893,
+      "sha256": "beb4707fb526cd65692f59e82390f35b772d1545193577dbfb0d4007c4ec4ec6"
+    },
+    {
+      "path": "docs/research/needs-review.md",
+      "bytes": 2783,
+      "sha256": "0fb7aa1e61b9d511ea4abbdcc527ddfdd947b2bb39be84231206f48cbef3ef14"
+    },
+    {
+      "path": "docs/research/PROOF_DOSSIERS.md",
+      "bytes": 7538,
+      "sha256": "ff26a9b16ca8f950cff553f189468a3feae0a22fa108e9055c99c2db14598aa1"
+    },
+    {
+      "path": "docs/research/SOURCE_CORRECTIONS.md",
+      "bytes": 3176,
+      "sha256": "0c499c34b7ab7cd28958c10254e5386f0f72b7da702f50121c197449470c5e72"
+    },
+    {
+      "path": "docs/research/test-results.md",
+      "bytes": 2467,
+      "sha256": "1170110d1b497d41dbaeb8b5cd6a993b76097221b084de7017df11a281f48ba0"
+    },
+    {
+      "path": "docs/sources.md",
+      "bytes": 1772,
+      "sha256": "28112ed6bc73dca96c1532158b79ada8b7af544b0dc2af63298308c3c5771cfb"
+    },
+    {
+      "path": "docs/start.tex",
+      "bytes": 3374,
+      "sha256": "c0eb51627114d7186082322e5586e35e53bda8ef0c1850113f502d0f01990ca1"
+    },
+    {
+      "path": "docs/tutorial-codex-v1.pdf",
+      "bytes": 424964,
+      "sha256": "498b778de77778b2793f5cad27c0729edd211dbda0deda5883207ebb0f133333"
+    },
+    {
+      "path": "docs/tutorial-codex-v1.tex",
+      "bytes": 5196,
+      "sha256": "4a16810d5fced71fa77132d34db152da38b7164e40fd2c5ee23e48c99bbf20fa"
+    },
+    {
+      "path": "docs/tutorial-deepseek-v1.pdf",
+      "bytes": 427567,
+      "sha256": "ef45ff8e695c3561dfe88793f19b2c1fff9cad9458d1ee1ac7dbe8a5828f5135"
+    },
+    {
+      "path": "docs/tutorial-deepseek-v1.tex",
+      "bytes": 6055,
+      "sha256": "333befea301fa21bd96273e28130272ea1df6e3eba616da8245219be2606c86d"
+    },
+    {
+      "path": "evidence/v1/additional-verification-results.json",
+      "bytes": 12541,
+      "sha256": "ed3c5e8c9561ba34578ec459a65fdc113076c53a2c960a505f5ef85d64824331"
+    },
+    {
+      "path": "evidence/v1/d-array-check.json",
+      "bytes": 9164,
+      "sha256": "45233faac9fee07ef07039bfbae04ec19e73d81801606fb0237dad3f74a02ac4"
+    },
+    {
+      "path": "evidence/v1/ds-scope-verification.json",
+      "bytes": 766,
+      "sha256": "ebae9033aa86a8d9647fcdddf1b4022a1ba53f8d65347669874693eb42aa1e2e"
+    },
+    {
+      "path": "evidence/v1/edition-tests.json",
+      "bytes": 1925,
+      "sha256": "cb002a7d6149462fdf074671bc1c2374d9ae78ff971816da4ccf22159302e181"
+    },
+    {
+      "path": "evidence/v1/pdf-qa.json",
+      "bytes": 262,
+      "sha256": "9eb767584a9b569a4bc980dc5eb06090be6eb7c7df693cb5c0a775c919292b3b"
+    },
+    {
+      "path": "evidence/v1/provenance.json",
+      "bytes": 2604,
+      "sha256": "a3d41d91557efd679f5a98328d4c2df03b585e456083317a96c02586eb9fbb4c"
+    },
+    {
+      "path": "evidence/v1/release-preparation.md",
+      "bytes": 945,
+      "sha256": "ded93f6a3fd0ee2e70324bbd8d8759b13d1007d3116d9663d26c0614d3ab9779"
+    },
+    {
+      "path": "evidence/v1/scores.json",
+      "bytes": 14490,
+      "sha256": "06640215f3956ea44e1f92bc6b85eea13b248d9d7845cbcf07bc4f386c158fe8"
+    },
+    {
+      "path": "evidence/v1/semantic-review-round2.md",
+      "bytes": 2955,
+      "sha256": "8c245da757a7488db4fa612ee0faa7826d18fc2642480fcc04c566ac8586fdd7"
+    },
+    {
+      "path": "evidence/v1/semantic-review.md",
+      "bytes": 3537,
+      "sha256": "a8a9e3cf3bb00ca0052f2269f9590aa4524fce696b4d419f64bda01b8d71f245"
+    },
+    {
+      "path": "evidence/v1/TEST_ERRATA.md",
+      "bytes": 1405,
+      "sha256": "0d8d5d6dad2948cc2466b8637eb15308adce8c2bb8d3286373296143e2b0d5a1"
+    },
+    {
+      "path": "evidence/v1/verification-results.json",
+      "bytes": 9041,
+      "sha256": "56ad2c32fb6c4f5c18d1ec6617fca09078f30a676dd18cb5e7a411a7e8787d30"
+    },
+    {
+      "path": "examples/corrector.json",
+      "bytes": 137,
+      "sha256": "4b6cc5e2a477b71b17001b0be364a49b57f5f3e6bb05bee7919be8aa2f83484f"
+    },
+    {
+      "path": "examples/d-array.json",
+      "bytes": 53,
+      "sha256": "7bc7dbb575b06c3d27f78d724a1f5a80c5de4cb71f03f5c9789a6d98d59f0570"
+    },
+    {
+      "path": "examples/ds.json",
+      "bytes": 124,
+      "sha256": "5ae3229463f888a11fa3556ae47c4918ad9e9e1576cd6110e6a13ae4d9cb23f0"
+    },
+    {
+      "path": "examples/mm.json",
+      "bytes": 104,
+      "sha256": "4da3c4f22cc0c1192db3e9ba141f88791036b02352cd64657c2ebe2a5a502d13"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3086,
+      "sha256": "8aaf7d471c0b21737b7a04eab203d785833d0cb36e1ada921817e2092ad43d2b"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "bytes": 921,
+      "sha256": "84d9b184380fead448aa14850a7435ab3700575718f7df157a23770becfd1af5"
+    },
+    {
+      "path": "RELEASE_PROCESS.md",
+      "bytes": 2973,
+      "sha256": "ab952c07ac2cebb99292093f087a8539ef8ec8c5fb022f2afd29eb5c0fc634c6"
+    },
+    {
+      "path": "releases/v1.0.0/CryptoBoolFunc-v1.0.0-codex.zip",
+      "bytes": 534955,
+      "sha256": "dc726c183af14c6c559e0c96218e75d51a735ef07f0a20d87e4aac8ba3d682c4"
+    },
+    {
+      "path": "releases/v1.0.0/CryptoBoolFunc-v1.0.0-deepseek.zip",
+      "bytes": 537123,
+      "sha256": "dc10cfed0d4f6812be787f5dc6f8295f01253536a6174524990f9090bc752437"
+    },
+    {
+      "path": "scripts/build_docs.py",
+      "bytes": 1352,
+      "sha256": "c4daf37b5baf05cb1100598c6f9c3320317232966038cf35c58ed6a1f3f926a4"
+    },
+    {
+      "path": "scripts/install.py",
+      "bytes": 4086,
+      "sha256": "5e29f1b354e2f81906d90a386b354ec22b71892e1f2dd9875ad6567463813c4d"
+    },
+    {
+      "path": "scripts/package_release.py",
+      "bytes": 2788,
+      "sha256": "95dd5b4c27edd61993e3189b9f352ef8de0204c4e404f3a1219d69dfeac49522"
+    },
+    {
+      "path": "scripts/verify_downloads.py",
+      "bytes": 624,
+      "sha256": "31ab7c289941ceade2d29ba8347e3bb5c5f94f96661ec1f0c23bbf57b5afff37"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/corrector-layer-sums.md",
+      "bytes": 5282,
+      "sha256": "3f6f9d0dede026b85f88c6e726def588c9dd40ce1fa0d6a221699999180d4a3f"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/disjoint-codes.md",
+      "bytes": 6431,
+      "sha256": "ef528f01cc7cf53c710ed4f694c884852401ce16d1518598daf932557ffcc74f"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/double-code-corrector.md",
+      "bytes": 6054,
+      "sha256": "32fcedb95d35f19faaa9f610ab576aaed8e0ae8e5281ef96701a38e2e8864554"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/ds-semibent.md",
+      "bytes": 5525,
+      "sha256": "4184f180815e5c1ffd615d0e17af8f42fdb7391af56ab4595d7a0c5062091a88"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/gmm-budget.md",
+      "bytes": 5855,
+      "sha256": "1dc4d3ec45da164201df90910e902458e7ef57853a8be54c1132a6a76f74eac0"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/mm-spectrum.md",
+      "bytes": 5691,
+      "sha256": "e68d2d4d4ba4f9101a3c4b42e86c6e7cd33a58ef3747d7625f95bbc3dcf63520"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/normality-pruning.md",
+      "bytes": 6005,
+      "sha256": "7fa0ae1bfb050c5a1a48520e24d93c95826ba7c60416f7b9eeb7f62611ac80da"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/orthogonal-spectrum.md",
+      "bytes": 5619,
+      "sha256": "eeda3121b0aecff98d8426eb382fe641a9cf151494355f121338e2fca875405a"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/prefix-partition.md",
+      "bytes": 4953,
+      "sha256": "957fe7575f81930722a7ed0aca3e91473724832f541115aecae9a544c1e71216"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/ps-bent-labels.md",
+      "bytes": 6026,
+      "sha256": "900129546c748b0a81c5288936d0425405222a09d69d50cd25d78275f4cac714"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/ps-recursive-balance.md",
+      "bytes": 5293,
+      "sha256": "56b94f80b653c88d65441b90e324edddd4f9ba8db8d47def3d0b14ec0b3d57b7"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/sequence-spectrum.md",
+      "bytes": 4530,
+      "sha256": "94eb03136a20186ef2355ce7fda6807fe25fc7d357c56b481bcb2e27a3008c73"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/vector-array.md",
+      "bytes": 7240,
+      "sha256": "578308fe169f86aa82e91132d506de5d5a59ecdb0eb5ef3f93c35a7f9124e1ac"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/vector-contract.md",
+      "bytes": 6082,
+      "sha256": "92111ef3b64b9ed8aa669863389b2401195d2179b38125e2ee6c1b5dcd6daa71"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capabilities/zero-spectrum-transport.md",
+      "bytes": 5897,
+      "sha256": "1d450f500797760b23eba888932c4b652e292ab173c5a658bdb012de21e42da8"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/capability-index.md",
+      "bytes": 3460,
+      "sha256": "f52d971d112357f5c1a1bff26afd3c9d45fe8265b4e21b36f63d2b3619865c5d"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/cheatsheet.md",
+      "bytes": 1923,
+      "sha256": "ecc837a1e514ba17fd1e776d0467394d07d04758d163713b898c0799d08d6783"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/glossary.md",
+      "bytes": 12323,
+      "sha256": "03e40a28db5fc573d486f4f41acbaeade860da102dab7a67067bba60def500bf"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/references/overview.md",
+      "bytes": 84993,
+      "sha256": "ec064fc084c02775b17c0bb7805acb81cc340b3e62d4cc597da7387f79c77594"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/resources/input-guide.md",
+      "bytes": 3273,
+      "sha256": "d7aa34e2debc2d5b41bcd28cd90028149068b99ce2be1af75691cea6869b4435"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/resources/math_tool.py",
+      "bytes": 14550,
+      "sha256": "984ef9dcee7c2fff93018329b65ae0b12a50b5d3c776f5c9aeaa95965e9e92c6"
+    },
+    {
+      "path": "skills/mmhs-cryptographic-function-design/SKILL.md",
+      "bytes": 5495,
+      "sha256": "1bb0ef2b83742d3e2191f0643a35b553c5115cddd7291e36ac149b6daa38807f"
+    },
+    {
+      "path": "tests/run_checks.py",
+      "bytes": 5559,
+      "sha256": "dd583120658bfbbd4d054884919b7ee16ed13b4eff33b5b7f5203049a9799962"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1725,
+      "sha256": "dd8ddc9a34f764873fb6e722c254e0667195b7d2672279bce4f31d17dd16710f"
+    },
+    {
+      "path": "VERSION",
+      "bytes": 6,
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03"
+    }
+  ],
+  "raw_pdf_distributed": false,
+  "codex_credit": "CONTRIBUTORS.md"
+}

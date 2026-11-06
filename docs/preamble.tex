@@ -1,0 +1,29 @@
+\documentclass[UTF8,a4paper,11pt,fontset=fandol]{ctexart}
+\usepackage[margin=22mm,headheight=14pt]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array,xcolor,fvextra,fancyhdr,enumitem}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!60!black,breaklinks=true]{hyperref}
+\setmonofont{Latin Modern Mono}
+\setCJKmonofont{FandolFang-Regular}
+\definecolor{ink}{HTML}{15324F}
+\definecolor{light}{HTML}{EEF3F8}
+\DefineVerbatimEnvironment{code}{Verbatim}{fontsize=\small,breaklines=true,breakanywhere=true,frame=single,rulecolor=\color{ink!25},framesep=3mm}
+\setlist{itemsep=2pt,topsep=4pt}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{3em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small CryptoBoolFunc 第一版}
+\fancyhead[R]{\small\HostName 教程}
+\fancyfoot[C]{\thepage}
+\hypersetup{pdftitle={CryptoBoolFunc 第一版安装与研究教程},pdfauthor={wernerchang; Codex (AI collaborator)}}
+\newcommand{\note}[1]{\par\noindent\colorbox{light}{\parbox{0.94\linewidth}{\small #1}}\par}
+\newcommand{\file}[1]{\texttt{\small\detokenize{#1}}}
+\title{\color{ink}CryptoBoolFunc 第一版\\\large 从安装仓颉到函数构造的保姆级教程\\\HostName 安装版本}
+\author{项目维护：wernerchang\\AI 协作贡献：Codex（OpenAI）}
+\date{版本 1.0.0（研究试用）\quad 2026年11月5日\\\small 资料核查：2026年11月4日}
+\begin{document}
+\sloppy\raggedright
+\maketitle
+\note{操作主线：先安装完整仓颉 cangjie-skill，再安装本项目第一版；然后确认宿主能读文件，运行一个数值实例，最后进入研究任务。两种安装版本共用相同数学内容。}
+\tableofcontents
+\clearpage

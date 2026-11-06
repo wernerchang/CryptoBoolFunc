@@ -1,0 +1,39 @@
+{
+  "edition": "第一版",
+  "version": "1.0.0",
+  "source_pdf_sha256": "df100184f16ab573b8a45c11954f4c52cbb31fc9063c69c7a85a9160d14f6cdd",
+  "raw_source_distributed": false,
+  "compiler": "cangjie-tools v2.5.0",
+  "local_upstream_checkout": "a28de55ba881b9928956a55048f743f7a9e3b23e",
+  "tutorial_upstream_zip_sha256": "c08bd78239fde0593dffdd5c315f9eceb59c22872baa5df54d34798449070906",
+  "transformations": [
+    "copy curated latest skill and authored research notes",
+    "remove host-specific paths",
+    "rewrite digest links to repository skills directory",
+    "exclude original PDF/full extraction/screenshots/caches/private data"
+  ],
+  "skill_files": [
+    "skills/mmhs-cryptographic-function-design/SKILL.md",
+    "skills/mmhs-cryptographic-function-design/references/capability-index.md",
+    "skills/mmhs-cryptographic-function-design/references/cheatsheet.md",
+    "skills/mmhs-cryptographic-function-design/references/glossary.md",
+    "skills/mmhs-cryptographic-function-design/references/overview.md",
+    "skills/mmhs-cryptographic-function-design/resources/input-guide.md",
+    "skills/mmhs-cryptographic-function-design/resources/math_tool.py",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/corrector-layer-sums.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/disjoint-codes.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/double-code-corrector.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/ds-semibent.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/gmm-budget.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/mm-spectrum.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/normality-pruning.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/orthogonal-spectrum.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/prefix-partition.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/ps-bent-labels.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/ps-recursive-balance.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/sequence-spectrum.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/vector-array.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/vector-contract.md",
+    "skills/mmhs-cryptographic-function-design/references/capabilities/zero-spectrum-transport.md"
+  ]
+}

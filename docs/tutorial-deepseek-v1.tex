@@ -1,0 +1,83 @@
+\def\HostName{DeepSeek Harness}
+\input{preamble.tex}
+\input{start.tex}
+\section{第二步：安装仓颉到 DeepSeek Harness}
+\subsection{本教程的 DeepSeek 安装版本是什么}
+本版本采用DeepSeek官方开源Harness作为本地宿主，使用其文件系统技能服务。需要配置模型并选择工作区；网页聊天产品的账号登录本身不会使电脑目录成为可调用技能。Harness仍属开发预览，界面和依赖可能变化\cite{dshreadme}。
+
+\subsection{准备Node与启动宿主}
+从\href{https://nodejs.org/}{Node.js官网}安装满足当前Harness要求的版本。核查日源码根包要求Node不低于24.9.0；应同时核对所安装发行包的engines。重新打开终端：
+\begin{code}
+node --version
+npm --version
+Set-Location $lab
+npx @deepseek-ai/dsh web
+\end{code}
+这是官方README提供的启动方式\cite{dshreadme}。首次npx可能询问是否安装所需包；核对包名后继续。成功标志是终端给出本地服务地址，通常为 \file{http://127.0.0.1:3080}。保持此终端运行，不要关掉后再疑惑网页为何断开。若端口不同，以实际输出为准。
+
+在网页中打开 Settings → Models，输入自己的DeepSeek API key并保存；密钥只填宿主设置，不写进项目或截图。点击Choose workspace，添加并选中实验目录或后面克隆的仓库。未选工作区时新任务编辑器可能不可用\cite{dshweb}。模型选当前账号实际可用的官方路由，不把过期别名硬编码进本项目。
+
+\subsection{把完整仓颉放入扫描根}
+另开一个PowerShell窗口，恢复前文变量或重新赋值，然后运行：
+\begin{code}
+$lab = Join-Path $env:USERPROFILE 'CryptoBoolFunc-Lab'
+$cj = Join-Path $lab 'upstream\cangjie-skill'
+$dshRoot = if ($env:DSH_HOME) { $env:DSH_HOME } else { Join-Path $env:USERPROFILE '.dsh' }
+$skillRoot = Join-Path $dshRoot 'skills'
+New-Item -ItemType Directory -Path $skillRoot -Force | Out-Null
+$dst = Join-Path $skillRoot 'cangjie-skill'
+if (Test-Path $dst) { throw '已存在仓颉，先备份或使用升级流程' }
+Copy-Item -LiteralPath $cj -Destination $dst -Recurse
+Test-Path (Join-Path $dst 'SKILL.md')
+Test-Path (Join-Path $dst 'scripts\cangjie.py')
+\end{code}
+成功标志是两项True。官方文件系统Provider只发现扫描根下一层的技能目录，用户级为 \file{DSH_HOME/skills}，项目级包括 \file{.dsh/skills}；深层嵌套不能自动递归发现\cite{dshskills}。
+
+新建Harness任务，输入：
+\begin{code}
+请加载本地技能cangjie-skill，读取其SKILL.md和方法目录。
+报告实际路径与doctor运行方式，暂不开始蒸馏。
+\end{code}
+若目录存在仍无技能，检查profile是否挂载技能注册服务和文件系统Provider：\file{@deepseek-ai/dsh-skill}、\file{@deepseek-ai/dsh-skill-filesystem}。需要修改配置时遵循当前Harness配置界面/官方文档，不要把不明YAML覆盖整个profile。重新开任务后确认目录出现在技能目录中。
+
+上游另有 \file{dsh-cangjie-skill-2.5.0.tgz} 插件封装，使用 \file{dsh plugin --profile web add} 安装；它与本节“完整目录+文件Provider”是两种分发形态。本教程主线选目录方式便于审阅，避免把任意SKILL文件夹直接当npm插件安装。若改走上游插件路线，按其Release说明下载TGZ、验SHA256，且不要同时重复安装同名目录。
+
+\section{第三步：安装 CryptoBoolFunc 第一版}
+\begin{code}
+Set-Location $lab
+git clone https://github.com/wernerchang/CryptoBoolFunc.git
+Set-Location CryptoBoolFunc
+Get-Content VERSION
+python scripts/install.py --host deepseek --scope user --dry-run
+python scripts/install.py --host deepseek --scope user
+\end{code}
+第一次发布的版本应为1.0.0。已有克隆时不要重复clone；先检查当前分支与版本。不会使用Git时，从仓库版本目录下载DeepSeek第一版ZIP，解压后在含scripts和skills的根目录运行同一命令。
+
+安装器会尊重 \file{DSH_HOME}。成功输出为 \file{installed} 或内容一致时的 \file{already_installed}。项目级安装用：
+\begin{code}
+python scripts/install.py --host deepseek --scope project --project .
+\end{code}
+Harness项目根按最近的Git仓库根确定；从仓库根启动并在UI选中这个工作区最容易排查。避免把项目级技能安装在任意子目录而实际会话选中另一个根\cite{dshskills}。
+
+在Harness重新建任务：
+\begin{code}
+请加载mmhs-cryptographic-function-design，先读入口和vector-contract卡。
+报告实际路径、15张卡数量、DS的R_z=I限制。
+说明如何记录全部2^m-1个分量，而不是只检查坐标。
+\end{code}
+这一步验收文件发现；下一节运行数值例。仅“模型理解”或“目录安装成功”不等于已完成在线宿主与账户的全面验收。
+
+\input{practice.tex}
+\section{DeepSeek Harness 专用排错}
+\begin{longtable}{p{0.27\linewidth}p{0.64\linewidth}}
+\toprule 现象 & 操作与成功标志 \\ \midrule
+浏览器无法连接 & 保持npx服务终端运行，使用实际打印的地址和端口；不要将本地地址自动开放到公网。\\
+对话框不能输入 & 先在UI添加并选中工作区。\\
+API认证失败 & 在Settings → Models核对密钥、账户和可用模型；项目不含也不代管密钥。\\
+技能没有出现 & 检查DSH\_HOME、profile中的技能服务、目录是否多套一层、frontmatter及会话工作区。\\
+目录存在但仍加载旧内容 & 新建任务或重启服务；原任务保留的已加载文本不一定随资源修改而重写。\\
+程序输出与模型总结不同 & 以实际JSON/退出码复核，要求模型引用计算文件；不要按总结手工改正确结果。\\
+\bottomrule
+\end{longtable}
+本版测试包括目录布局与数学程序；发布过程没有使用读者的API key启动新Harness会话。因此教程将“可复跑的安装步骤”和“每个用户必须亲自完成的宿主验收”分别列出，不把一方替代另一方。
+\input{closing.tex}

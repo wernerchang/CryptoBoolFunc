@@ -1,0 +1,640 @@
+{
+  "with-skill": {
+    "planned": 30,
+    "completed": 30,
+    "strict_passed": 28,
+    "semantic_passed": 30,
+    "normal_passed": 15,
+    "boundary_passed": 15,
+    "cases": [
+      {
+        "id": "N01",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N02",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N03",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N04",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N05",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N06",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N07",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N08",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N09",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N10",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N11",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N12",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N13",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N14",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N15",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E01",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E02",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E03",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E04",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E05",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E06",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E07",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": true,
+        "mismatches": {
+          "status": {
+            "expected": "error",
+            "observed": "not_applicable"
+          }
+        }
+      },
+      {
+        "id": "E08",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E09",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E10",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E11",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E12",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E13",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": true,
+        "mismatches": {
+          "status": {
+            "expected": "error",
+            "observed": "not_applicable"
+          }
+        }
+      },
+      {
+        "id": "E14",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E15",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      }
+    ]
+  },
+  "without-skill": {
+    "planned": 30,
+    "completed": 30,
+    "strict_passed": 25,
+    "semantic_passed": 28,
+    "normal_passed": 13,
+    "boundary_passed": 15,
+    "cases": [
+      {
+        "id": "N01",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N02",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N03",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N04",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N05",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N06",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N07",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N08",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N09",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N10",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N11",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": false,
+        "mismatches": {
+          "status": {
+            "expected": "ok",
+            "observed": "not_applicable"
+          },
+          "n": {
+            "expected": 9,
+            "observed": null
+          },
+          "balanced": {
+            "expected": true,
+            "observed": null
+          },
+          "min_nonlinearity": {
+            "expected": 240,
+            "observed": null
+          }
+        }
+      },
+      {
+        "id": "N12",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N13",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N14",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "N15",
+        "kind": "normal",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": false,
+        "mismatches": {
+          "status": {
+            "expected": "ok",
+            "observed": "not_applicable"
+          },
+          "min_nonlinearity": {
+            "expected": 448,
+            "observed": null
+          },
+          "min_degree": {
+            "expected": 4,
+            "observed": null
+          },
+          "corrector_order": {
+            "expected": 4,
+            "observed": null
+          }
+        }
+      },
+      {
+        "id": "E01",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E02",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E03",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E04",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E05",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E06",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E07",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": true,
+        "mismatches": {
+          "status": {
+            "expected": "error",
+            "observed": "not_applicable"
+          }
+        }
+      },
+      {
+        "id": "E08",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E09",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E10",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E11",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E12",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": true,
+        "mismatches": {
+          "status": {
+            "expected": "error",
+            "observed": "not_applicable"
+          }
+        }
+      },
+      {
+        "id": "E13",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": false,
+        "semantic_pass": true,
+        "mismatches": {
+          "status": {
+            "expected": "error",
+            "observed": "not_applicable"
+          }
+        }
+      },
+      {
+        "id": "E14",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      },
+      {
+        "id": "E15",
+        "kind": "boundary",
+        "completed": true,
+        "strict_pass": true,
+        "semantic_pass": true,
+        "mismatches": {}
+      }
+    ]
+  },
+  "routing": {
+    "planned": 18,
+    "passed": 18,
+    "cases": [
+      {
+        "id": "R01",
+        "passed": true
+      },
+      {
+        "id": "R02",
+        "passed": true
+      },
+      {
+        "id": "R03",
+        "passed": true
+      },
+      {
+        "id": "R04",
+        "passed": true
+      },
+      {
+        "id": "R05",
+        "passed": true
+      },
+      {
+        "id": "R06",
+        "passed": true
+      },
+      {
+        "id": "R07",
+        "passed": true
+      },
+      {
+        "id": "R08",
+        "passed": true
+      },
+      {
+        "id": "R09",
+        "passed": true
+      },
+      {
+        "id": "R10",
+        "passed": true
+      },
+      {
+        "id": "R11",
+        "passed": true
+      },
+      {
+        "id": "R12",
+        "passed": true
+      },
+      {
+        "id": "R13",
+        "passed": true
+      },
+      {
+        "id": "R14",
+        "passed": true
+      },
+      {
+        "id": "R15",
+        "passed": true
+      },
+      {
+        "id": "R16",
+        "passed": true
+      },
+      {
+        "id": "R17",
+        "passed": true
+      },
+      {
+        "id": "R18",
+        "passed": true
+      }
+    ]
+  },
+  "method": "Two isolated fresh agent contexts; fixed inputs; no expected answers exposed. Semantic refusal adjudication separate from original strict status assertions. No complete hidden 60/40 optimization protocol; DS revision followed by new independent regression."
+}
