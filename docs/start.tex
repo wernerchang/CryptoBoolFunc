@@ -1,0 +1,50 @@
+\section{第一步：先把仓颉安装材料准备好}
+\subsection{先分清两个名称}
+仓颉 \file{cangjie-skill} 是上游“把长内容蒸馏成技能”的方法与工具。CryptoBoolFunc 是利用该流程整理出的密码函数研究技能。前者负责提取、验证、编译；后者包含本书的15张能力卡和小参数计算程序。只下载本项目，并不等于已经安装了仓颉。
+
+本教程以 Windows PowerShell 为主。先打开开始菜单，搜索 PowerShell，进入普通终端。命令按块执行，每块结束先看“成功标志”，不要一次粘贴整篇。macOS/Linux 的差异在附录列出。所有下载采用实际发布附件；不要把网页另存的HTML改名为ZIP。
+
+\subsection{检查 Python 与工作目录}
+需要 Python 3.10 或以上和网络。运行：
+\begin{code}
+python --version
+python -m pip --version
+\end{code}
+成功标志是显示 Python 版本及pip路径。如果打开微软商店、提示找不到命令，先从\href{https://www.python.org/downloads/}{Python官网}安装，勾选添加PATH，再关闭并重新打开终端。如果电脑只有 \file{py -3} 可用，本文所有 \file{python} 统一换成 \file{py -3}，不要混用不同解释器安装依赖。
+
+创建实验目录，后面的文件都放在这里：
+\begin{code}
+$lab = Join-Path $env:USERPROFILE 'CryptoBoolFunc-Lab'
+New-Item -ItemType Directory -Path $lab -Force | Out-Null
+Set-Location $lab
+Get-Location
+\end{code}
+成功标志是当前路径末尾为 \file{CryptoBoolFunc-Lab}。它是示例工作目录，可改到自己的数据盘；路径含空格时保留引号。
+
+\subsection{下载、验哈希、解压完整仓颉}
+本版教程采用上游v2.5.0在2026-09-13刷新后的通用附件。上游说明，同一标签自动生成的Source code归档与刷新附件可能不同。以附件和校验值为准\cite{cangjie}。
+
+\begin{code}
+$base = 'https://github.com/kangarooking/cangjie-skill/releases/download/v2.5.0'
+Invoke-WebRequest "$base/cangjie-skill-2.5.0.zip" -OutFile cangjie.zip
+Invoke-WebRequest "$base/cangjie-skill-2.5.0.zip.sha256" -OutFile cangjie.sha256
+$actual = (Get-FileHash cangjie.zip -Algorithm SHA256).Hash.ToLower()
+$expected = ((Get-Content cangjie.sha256 -Raw).Trim() -split '\s+')[0].ToLower()
+if ($actual -ne $expected) { throw 'SHA256不匹配，请重新下载' }
+Expand-Archive -LiteralPath cangjie.zip -DestinationPath upstream
+$cj = Join-Path $lab 'upstream\cangjie-skill'
+Test-Path (Join-Path $cj 'SKILL.md')
+Test-Path (Join-Path $cj 'scripts\cangjie.py')
+\end{code}
+两项都应为 \file{True}。若目录已存在，先换一个新的解压目录，不要直接覆盖旧研究文件。已核实附件SHA256为：
+\begin{code}
+c08bd78239fde0593dffdd5c315f9eceb59c22872baa5df54d34798449070906
+\end{code}
+如果上游以后重新发布而附件变化，不应忽略不匹配；应记录新的版本与来源，重新验证。
+
+\subsection{安装依赖并自检}
+\begin{code}
+python -m pip install pyyaml
+python "$cj\scripts\cangjie.py" doctor
+\end{code}
+成功标志是 \file{doctor: PASS}。\file{tiktoken}、\file{jsonschema} 为可选项；它们的缺失提示与PyYAML缺失不同。若报 \file{No module named yaml}，用同一个 \file{python -m pip} 重装后再测。此时只是仓颉文件和工具就绪；下一节才将完整目录放入对应宿主扫描根。

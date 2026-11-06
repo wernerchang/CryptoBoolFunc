@@ -1,0 +1,112 @@
+{
+  "version": "1.0.0",
+  "checks": [
+    {
+      "id": "mm",
+      "passed": true
+    },
+    {
+      "id": "prefix",
+      "passed": true
+    },
+    {
+      "id": "gmm",
+      "passed": true
+    },
+    {
+      "id": "codes",
+      "passed": true
+    },
+    {
+      "id": "ps-bent",
+      "passed": true
+    },
+    {
+      "id": "ps-recursive",
+      "passed": true
+    },
+    {
+      "id": "ds9",
+      "passed": true
+    },
+    {
+      "id": "ds11",
+      "passed": true
+    },
+    {
+      "id": "d-array-37",
+      "passed": true
+    },
+    {
+      "id": "d-array-47",
+      "passed": true
+    },
+    {
+      "id": "double-code",
+      "passed": true
+    },
+    {
+      "id": "zero-transport",
+      "passed": true
+    },
+    {
+      "id": "normality",
+      "passed": true
+    },
+    {
+      "id": "sequence",
+      "passed": true
+    },
+    {
+      "id": "all-components",
+      "passed": true
+    },
+    {
+      "id": "duplicate-phi",
+      "passed": true
+    },
+    {
+      "id": "incomplete-partition",
+      "passed": true
+    },
+    {
+      "id": "bad-field",
+      "passed": true
+    },
+    {
+      "id": "custom-R",
+      "passed": true
+    },
+    {
+      "id": "bad-AB",
+      "passed": true
+    },
+    {
+      "id": "nonBent-pruning",
+      "passed": true
+    },
+    {
+      "id": "cyclic-overclaim",
+      "passed": true
+    },
+    {
+      "id": "intersecting-codes",
+      "passed": true
+    },
+    {
+      "id": "layer-vs-pointwise",
+      "passed": true
+    },
+    {
+      "id": "installer-codex-dry-idempotent-refuse-backup",
+      "passed": true
+    },
+    {
+      "id": "installer-deepseek-dry-idempotent-refuse-backup",
+      "passed": true
+    }
+  ],
+  "passed": 26,
+  "failed": 0,
+  "scope": "offline mathematics and isolated project directory installation; no live account/model session"
+}

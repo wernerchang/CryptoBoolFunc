@@ -1,0 +1,75 @@
+\section{升级、备份与跨平台操作}
+\subsection{升级不覆盖旧研究}
+先查看现有安装路径、版本和差异，再运行：
+\begin{code}
+python scripts/install.py --host codex --scope user --upgrade --dry-run
+python scripts/install.py --host codex --scope user --upgrade
+\end{code}
+DeepSeek版本把host值改为 \file{deepseek}。若使用项目级，保留原来的scope和project参数。旧目录会存入扫描根的 \file{.backups/时间戳/技能名}，安装器报告具体位置；不自动删除历史研究目录。需要回退时先停止宿主，再将当前目录另存，恢复指定备份，重新验收。不要同时装两份同名旧版和新版来“试试”。
+
+\subsection{macOS/Linux差异}
+将 \file{python} 统一改为实际可用的 \file{python3}，安装和测试命令其他参数不变。下载仓颉可用：
+\begin{code}
+mkdir -p "$HOME/CryptoBoolFunc-Lab"
+cd "$HOME/CryptoBoolFunc-Lab"
+base=https://github.com/kangarooking/cangjie-skill/releases/download/v2.5.0
+curl -fL "$base/cangjie-skill-2.5.0.zip" -o cangjie.zip
+curl -fL "$base/cangjie-skill-2.5.0.zip.sha256" -o cangjie.sha256
+shasum -a 256 cangjie.zip
+cat cangjie.sha256
+unzip cangjie.zip -d upstream
+python3 -m pip install pyyaml
+python3 upstream/cangjie-skill/scripts/cangjie.py doctor
+\end{code}
+逐字比较两个哈希后才继续。Linux可用 \file{sha256sum}。将完整 \file{upstream/cangjie-skill} 复制到所选宿主扫描根，或克隆本项目后用安装器的 \file{--cangjie-source} 参数一起安装。安装器通过Python解析用户目录，因此无需手工翻译Windows路径。
+
+\section{重新编译本教程PDF}
+安装带中文支持的TeX Live或MiKTeX。使用XeLaTeX，而不是pdfLaTeX。本教程采用Fandol中文字体与Latin Modern Mono，避免依赖私人电脑字体。
+\begin{code}
+python scripts/build_docs.py
+\end{code}
+此脚本对两份TeX各编译两遍，临时文件留在忽略的.build目录，PDF复制到docs。手动编译则先进入docs：
+\begin{code}
+xelatex -interaction=nonstopmode -halt-on-error tutorial-codex-v1.tex
+xelatex -interaction=nonstopmode -halt-on-error tutorial-codex-v1.tex
+\end{code}
+另一份把文件名改为 \file{tutorial-deepseek-v1.tex}。成功不只看“生成PDF”：还要查看全部页的标题、中文、代码换行、链接和页码。日志中的Overfull、Missing character和LaTeX Error需要处理；不能把异常日志隐藏后继续发布。
+
+\section{以后怎样按固定流程上传GitHub}
+本仓库没有一份可以凭空套用的“统一最新强制上传规范”；项目采用核查日GitHub官方文档和自身规则建立流程\cite{githubpr,githubrelease}。后续按 \file{RELEASE_PROCESS.md} 执行：
+\begin{enumerate}
+\item 读取远端默认分支、最新SHA与保护规则，检查本地变更；先确定本次授权范围。
+\item 更新版本、说明、数学边界及Codex贡献记录；只提交公开清单内的文件。
+\item 运行测试，重编TeX/PDF并视觉验收；生成两个宿主ZIP、SHA256SUMS与manifest。
+\item 建立 \file{codex/v版本-主题} 分支并提交；上传后创建PR，说明变化、验证与未测项。
+\item 在授权和仓库规则允许时合并；有失败检查或审批要求则保持PR并说明条件，不强推。
+\item 再读远端main/合并提交，核对PDF、ZIP和提交SHA，保存上传日志。
+\end{enumerate}
+原始PDF、全文抽取、个人绝对路径、密钥和编译缓存不进入公共提交。仓库的 \file{releases/v1.0.0} 是本项目版本资产目录；只有确实创建了GitHub Release和标签，才称创建了该平台的Release，二者不能混同。
+
+\section{完成检查表}
+\begin{enumerate}
+\item 仓颉完整目录可读，doctor为PASS，版本和下载哈希有记录。
+\item 当前宿主在正确工作区发现本项目入口，能读取15张卡和对应资源。
+\item MM输出N=4；DS示例N=240且7分量；双码校正器N=448；D阵列固定表示得到10。
+\item 非法输入被拒绝，DS一般R分支与其他待核项没有被重新启用。
+\item 安装器、版本、PDF/TeX、SHA256与贡献者说明均可查；个人实验输出已另存。
+\end{enumerate}
+
+\section*{贡献与引用}
+本项目由wernerchang发起和维护。Codex（OpenAI）作为AI协作贡献者，协助研究整理、程序、验证、教程和发布准备；具体记录见 \file{CONTRIBUTORS.md}。仓颉上游和《密码函数》作者分别署名。AI协作不替代维护者对学术结论的判断。
+
+\begingroup\small
+\begin{thebibliography}{9}
+\setlength{\itemsep}{1pt}
+\bibitem{cangjie} kangarooking. Cangjie Skill：\href{https://github.com/kangarooking/cangjie-skill}{官方仓库}及\href{https://github.com/kangarooking/cangjie-skill/releases/tag/v2.5.0}{v2.5.0刷新附件}。核查2026-11-04。
+\bibitem{codexskills} OpenAI. \href{https://learn.chatgpt.com/docs/build-skills}{Build skills}。本地目录、完整技能与调用方式。
+\bibitem{codexquick} OpenAI. \href{https://developers.openai.com/codex/quickstart}{Codex quickstart}。
+\bibitem{dshreadme} DeepSeek AI. \href{https://github.com/deepseek-ai/deepseek-harness}{DeepSeek Harness官方README}，开发预览与启动方式。
+\bibitem{dshskills} DeepSeek AI. \href{https://github.com/deepseek-ai/deepseek-harness/blob/master/packages/skill/skill-filesystem/README.md}{Filesystem skill provider}，扫描根及目录格式。
+\bibitem{dshweb} DeepSeek AI. \href{https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart}{Web UI指南}，模型与工作区。
+\bibitem{githubpr} GitHub Docs. \href{https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request}{Creating a pull request}。
+\bibitem{githubrelease} GitHub Docs. \href{https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases}{About releases}。
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,0 +1,482 @@
+{
+  "MM_2_22_n4_k3": {
+    "balanced": true,
+    "nonlinearity": 4,
+    "resilience": 0,
+    "corrector_order": 0,
+    "degree": 2,
+    "abs_spectrum": {
+      "0": 12,
+      "8": 4
+    },
+    "weight_layer_sums": [
+      0,
+      8,
+      -16,
+      -8,
+      0
+    ],
+    "sac": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "PS_recursive_3_16_n12_m3": {
+    "n": 12,
+    "m": 3,
+    "output_counts": {
+      "0": 512,
+      "1": 512,
+      "2": 512,
+      "3": 512,
+      "4": 512,
+      "5": 512,
+      "6": 512,
+      "7": 512
+    },
+    "min_nonlinearity": 2010,
+    "min_degree": 11,
+    "max_degree": 11,
+    "components": {
+      "1": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          404,
+          692,
+          1836,
+          108,
+          1160,
+          -568,
+          664,
+          24,
+          164,
+          -188,
+          -132,
+          -68
+        ]
+      },
+      "2": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          416,
+          2760,
+          2800,
+          2152,
+          -2496,
+          -1072,
+          -1696,
+          80,
+          672,
+          104,
+          304,
+          72
+        ]
+      },
+      "3": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          412,
+          228,
+          2356,
+          236,
+          600,
+          808,
+          1192,
+          -232,
+          -308,
+          -972,
+          -156,
+          -68
+        ]
+      },
+      "4": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          412,
+          2588,
+          2388,
+          1684,
+          -1064,
+          -680,
+          -2456,
+          360,
+          588,
+          76,
+          132,
+          68
+        ]
+      },
+      "5": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          408,
+          632,
+          2520,
+          536,
+          496,
+          48,
+          48,
+          -208,
+          632,
+          -936,
+          -8,
+          -72
+        ]
+      },
+      "6": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          412,
+          2052,
+          1860,
+          1980,
+          -1576,
+          -408,
+          -824,
+          56,
+          -52,
+          340,
+          180,
+          76
+        ]
+      },
+      "7": {
+        "balanced": true,
+        "nonlinearity": 2010,
+        "resilience": 0,
+        "corrector_order": 0,
+        "degree": 11,
+        "abs_spectrum": {
+          "0": 64,
+          "52": 512,
+          "56": 768,
+          "60": 512,
+          "64": 448,
+          "68": 512,
+          "72": 768,
+          "76": 512
+        },
+        "weight_layer_sums": [
+          0,
+          416,
+          -120,
+          3136,
+          -104,
+          704,
+          848,
+          2304,
+          48,
+          -1888,
+          -600,
+          -576,
+          -72
+        ]
+      }
+    }
+  },
+  "corrector_4_41_n10_m3": {
+    "n": 10,
+    "m": 3,
+    "output_counts": {
+      "0": 128,
+      "1": 128,
+      "2": 128,
+      "3": 128,
+      "4": 128,
+      "5": 128,
+      "6": 128,
+      "7": 128
+    },
+    "min_nonlinearity": 448,
+    "min_degree": 4,
+    "max_degree": 4,
+    "components": {
+      "1": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 4,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "2": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 4,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "3": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 5,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "4": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 4,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "5": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 5,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "6": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 5,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "7": {
+        "balanced": true,
+        "nonlinearity": 448,
+        "resilience": 3,
+        "corrector_order": 6,
+        "degree": 4,
+        "abs_spectrum": {
+          "0": 960,
+          "128": 64
+        },
+        "weight_layer_sums": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1024,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "lemma_4_23_sign_check": {
+    "e": "1/10",
+    "f": "x1+x2",
+    "actual_half_P0_minus_P1": "1/50",
+    "printed_formula": "-1/50",
+    "consistent_formula": "1/50",
+    "status": "printed sign disagrees with printed definitions"
+  },
+  "corrector_4_28_n4": {
+    "balanced": true,
+    "nonlinearity": 4,
+    "resilience": 1,
+    "corrector_order": 2,
+    "degree": 2,
+    "abs_spectrum": {
+      "0": 12,
+      "8": 4
+    },
+    "weight_layer_sums": [
+      0,
+      0,
+      0,
+      16,
+      0
+    ]
+  }
+}

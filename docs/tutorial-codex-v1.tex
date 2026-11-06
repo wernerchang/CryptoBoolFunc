@@ -1,0 +1,78 @@
+\def\HostName{Codex}
+\input{preamble.tex}
+\input{start.tex}
+\section{第二步：将仓颉安装进 Codex}
+\subsection{准备宿主与登录}
+如果已有Codex桌面应用，打开并确认能正常开始本地任务。如果尚未安装，从\href{https://developers.openai.com/codex/quickstart}{官方快速开始}进入当前系统对应的安装/登录流程\cite{codexquick}。本教程不要求切换模型或修改现有账号设置。
+
+根据核查日官方指南，Codex用户级本地技能目录为 \file{~/.agents/skills}，项目级为仓库内 \file{.agents/skills}；应安装完整目录\cite{codexskills}。旧机器可能有兼容目录，不要把同名技能在多个根重复安装，以免选择器出现重复项。
+
+\subsection{安装完整仓颉目录}
+接着在刚才PowerShell中运行：
+\begin{code}
+$skillRoot = Join-Path $env:USERPROFILE '.agents\skills'
+New-Item -ItemType Directory -Path $skillRoot -Force | Out-Null
+$dst = Join-Path $skillRoot 'cangjie-skill'
+if (Test-Path $dst) { throw '已存在仓颉，请先阅读升级与备份章节' }
+Copy-Item -LiteralPath $cj -Destination $dst -Recurse
+Test-Path (Join-Path $dst 'methodology')
+Test-Path (Join-Path $dst 'scripts\cangjie.py')
+\end{code}
+成功标志是两项True，且 \file{cangjie-skill/SKILL.md} 只有一层技能目录。错误结构是 \file{cangjie-skill/cangjie-skill/SKILL.md}。只复制一个SKILL.md会导致后续模板和编译脚本缺失。
+
+\subsection{确认 Codex 真的发现并读取}
+新开一个Codex本地会话，输入：
+\begin{code}
+请使用 $cangjie-skill。
+先读取该技能，告诉我安装路径、版本与doctor检查方法。
+此时不要开始蒸馏，也不要修改文件。
+\end{code}
+成功标准是能指出实际安装目录并找到方法文件；只说“我会帮你”不算发现成功。CLI/IDE可使用技能选择器或显式名称；界面变化时以当前官方说明为准。未出现时先重开会话或重启Codex，再检查目录、frontmatter和权限。
+
+\section{第三步：安装 CryptoBoolFunc 第一版}
+\subsection{获取仓库与两种下载方式}
+推荐安装Git后克隆：
+\begin{code}
+Set-Location $lab
+git clone https://github.com/wernerchang/CryptoBoolFunc.git
+Set-Location CryptoBoolFunc
+Get-Content VERSION
+\end{code}
+第一次发布应显示 \file{1.0.0}。如果以后main已更新，请从仓库版本目录下载第一版Codex ZIP，并对照SHA256SUMS；不要用后来main的内容冒充第一版。不会使用Git时，可在仓库下载ZIP并解压到实验目录，确认根目录有 \file{scripts/install.py} 和 \file{skills}。
+
+\subsection{先预演，再实际安装}
+\begin{code}
+python scripts/install.py --host codex --scope user --dry-run
+python scripts/install.py --host codex --scope user
+\end{code}
+预演输出 \file{dry_run}，不复制文件。实际安装输出 \file{installed}；内容相同再次执行会输出 \file{already_installed}。若现有目录内容不同，会拒绝覆盖；确认升级后按后文备份方式执行。
+
+项目级安装则用：
+\begin{code}
+python scripts/install.py --host codex --scope project --project .
+\end{code}
+用户级与项目级选一种即可。项目级的好处是只影响当前仓库；用户级适用于多个研究目录。第一版Codex ZIP中包含相同的安装脚本和完整技能目录；它不是需要在Python中 \file{pip install} 的库。
+
+\subsection{新会话验收}
+在Codex中打开克隆的仓库作为工作区，新开会话并输入：
+\begin{code}
+请使用 $mmhs-cryptographic-function-design。
+先读取入口，列出它的15张能力卡；说明DS只允许R_z=I，
+以及同偏差校正阶和弹性阶的区别。
+请给出实际读取路径，不要开始构造。
+\end{code}
+成功标准：找到入口、15卡以及明确边界。若回答只有目录名称而不读取，明确要求打开SKILL.md及相应卡。模型能口头复述不等于程序已执行；下一章用实际数值验收。
+
+\input{practice.tex}
+\section{Codex 专用排错与项目使用}
+\begin{longtable}{p{0.27\linewidth}p{0.64\linewidth}}
+\toprule 现象 & 操作与成功标志 \\ \midrule
+找不到技能 & 检查用户/项目扫描根，确保name与目录格式正确；重开会话，要求报告实际文件路径。\\
+同名技能出现两次 & 查找用户级、项目级和旧兼容目录；只保留本次选定来源，先备份再移动。\\
+不能运行Python & 在宿主终端核查解释器路径；使用已验证的Python绝对路径。系统终端可运行不代表宿主PATH相同。\\
+只能看到文件但不能运行 & 检查当前沙箱/权限策略；先读与预演，依据宿主批准流程执行必要命令，不通过关闭所有限制解决。\\
+模型说计算完成却无文件 & 要求保存输入JSON、输出JSON、命令、退出码和所有非零分量指标；人工打开输出核对。\\
+\bottomrule
+\end{longtable}
+后续新论文或新函数候选，先用仓颉做来源与任务拆解，再用本项目做限定构造和验证。两者都要留日志；用同一个词“验证通过”时，务必说明是来源、公式推导、脚本实例还是在线宿主任务。
+\input{closing.tex}

@@ -1,0 +1,610 @@
+{
+  "poly": "x^5+x^2+1",
+  "columns": "alpha^j,alpha^(j+1),alpha^(j+2)",
+  "valid_count": 10,
+  "invalid_count": 21,
+  "valid_rows": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    18,
+    19,
+    25
+  ],
+  "rows": [
+    {
+      "row": 0,
+      "coefficients": [
+        "00001",
+        "00010",
+        "00100"
+      ],
+      "combination_weights": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 1,
+      "coefficients": [
+        "00010",
+        "00100",
+        "01000"
+      ],
+      "combination_weights": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 2,
+      "coefficients": [
+        "00100",
+        "01000",
+        "10000"
+      ],
+      "combination_weights": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 3,
+      "coefficients": [
+        "01000",
+        "10000",
+        "00101"
+      ],
+      "combination_weights": [
+        1,
+        1,
+        2,
+        2,
+        3,
+        3,
+        4
+      ],
+      "valid": false
+    },
+    {
+      "row": 4,
+      "coefficients": [
+        "10000",
+        "00101",
+        "01010"
+      ],
+      "combination_weights": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        4,
+        5
+      ],
+      "valid": false
+    },
+    {
+      "row": 5,
+      "coefficients": [
+        "00101",
+        "01010",
+        "10100"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        4,
+        2,
+        2,
+        4,
+        4
+      ],
+      "valid": true
+    },
+    {
+      "row": 6,
+      "coefficients": [
+        "01010",
+        "10100",
+        "01101"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        4,
+        3,
+        3,
+        3,
+        3
+      ],
+      "valid": true
+    },
+    {
+      "row": 7,
+      "coefficients": [
+        "10100",
+        "01101",
+        "11010"
+      ],
+      "combination_weights": [
+        2,
+        3,
+        3,
+        3,
+        3,
+        4,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 8,
+      "coefficients": [
+        "01101",
+        "11010",
+        "10001"
+      ],
+      "combination_weights": [
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 9,
+      "coefficients": [
+        "11010",
+        "10001",
+        "00111"
+      ],
+      "combination_weights": [
+        3,
+        2,
+        3,
+        3,
+        4,
+        3,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 10,
+      "coefficients": [
+        "10001",
+        "00111",
+        "01110"
+      ],
+      "combination_weights": [
+        2,
+        3,
+        3,
+        3,
+        5,
+        2,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 11,
+      "coefficients": [
+        "00111",
+        "01110",
+        "11100"
+      ],
+      "combination_weights": [
+        3,
+        3,
+        2,
+        3,
+        4,
+        2,
+        3
+      ],
+      "valid": true
+    },
+    {
+      "row": 12,
+      "coefficients": [
+        "01110",
+        "11100",
+        "11101"
+      ],
+      "combination_weights": [
+        3,
+        3,
+        2,
+        4,
+        3,
+        1,
+        4
+      ],
+      "valid": false
+    },
+    {
+      "row": 13,
+      "coefficients": [
+        "11100",
+        "11101",
+        "11111"
+      ],
+      "combination_weights": [
+        3,
+        4,
+        1,
+        5,
+        2,
+        1,
+        4
+      ],
+      "valid": false
+    },
+    {
+      "row": 14,
+      "coefficients": [
+        "11101",
+        "11111",
+        "11011"
+      ],
+      "combination_weights": [
+        4,
+        5,
+        1,
+        4,
+        2,
+        1,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 15,
+      "coefficients": [
+        "11111",
+        "11011",
+        "10011"
+      ],
+      "combination_weights": [
+        5,
+        4,
+        1,
+        3,
+        2,
+        1,
+        4
+      ],
+      "valid": false
+    },
+    {
+      "row": 16,
+      "coefficients": [
+        "11011",
+        "10011",
+        "00011"
+      ],
+      "combination_weights": [
+        4,
+        3,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 17,
+      "coefficients": [
+        "10011",
+        "00011",
+        "00110"
+      ],
+      "combination_weights": [
+        3,
+        2,
+        1,
+        2,
+        3,
+        2,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 18,
+      "coefficients": [
+        "00011",
+        "00110",
+        "01100"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 19,
+      "coefficients": [
+        "00110",
+        "01100",
+        "11000"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        2,
+        2,
+        4,
+        2,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 20,
+      "coefficients": [
+        "01100",
+        "11000",
+        "10101"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        1
+      ],
+      "valid": false
+    },
+    {
+      "row": 21,
+      "coefficients": [
+        "11000",
+        "10101",
+        "01111"
+      ],
+      "combination_weights": [
+        2,
+        3,
+        3,
+        4,
+        4,
+        3,
+        1
+      ],
+      "valid": false
+    },
+    {
+      "row": 22,
+      "coefficients": [
+        "10101",
+        "01111",
+        "11110"
+      ],
+      "combination_weights": [
+        3,
+        4,
+        3,
+        4,
+        3,
+        2,
+        1
+      ],
+      "valid": false
+    },
+    {
+      "row": 23,
+      "coefficients": [
+        "01111",
+        "11110",
+        "11001"
+      ],
+      "combination_weights": [
+        4,
+        4,
+        2,
+        3,
+        3,
+        3,
+        1
+      ],
+      "valid": false
+    },
+    {
+      "row": 24,
+      "coefficients": [
+        "11110",
+        "11001",
+        "10111"
+      ],
+      "combination_weights": [
+        4,
+        3,
+        3,
+        4,
+        2,
+        3,
+        1
+      ],
+      "valid": false
+    },
+    {
+      "row": 25,
+      "coefficients": [
+        "11001",
+        "10111",
+        "01011"
+      ],
+      "combination_weights": [
+        3,
+        4,
+        3,
+        3,
+        2,
+        3,
+        2
+      ],
+      "valid": true
+    },
+    {
+      "row": 26,
+      "coefficients": [
+        "10111",
+        "01011",
+        "10110"
+      ],
+      "combination_weights": [
+        4,
+        3,
+        3,
+        3,
+        1,
+        4,
+        2
+      ],
+      "valid": false
+    },
+    {
+      "row": 27,
+      "coefficients": [
+        "01011",
+        "10110",
+        "01001"
+      ],
+      "combination_weights": [
+        3,
+        3,
+        4,
+        2,
+        1,
+        5,
+        2
+      ],
+      "valid": false
+    },
+    {
+      "row": 28,
+      "coefficients": [
+        "10110",
+        "01001",
+        "10010"
+      ],
+      "combination_weights": [
+        3,
+        2,
+        5,
+        2,
+        1,
+        4,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 29,
+      "coefficients": [
+        "01001",
+        "10010",
+        "00001"
+      ],
+      "combination_weights": [
+        2,
+        2,
+        4,
+        1,
+        1,
+        3,
+        3
+      ],
+      "valid": false
+    },
+    {
+      "row": 30,
+      "coefficients": [
+        "10010",
+        "00001",
+        "00010"
+      ],
+      "combination_weights": [
+        2,
+        1,
+        3,
+        1,
+        1,
+        2,
+        2
+      ],
+      "valid": false
+    }
+  ],
+  "alternate": {
+    "poly": "x^5+x^3+x^2+x+1",
+    "valid_count": 11,
+    "valid_rows_zero_based": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "basis_alpha5_constant_first": "11110",
+    "table_3_6_unstruck_rows_one_based": [
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "note": "Original table 3.6 visual alpha^5 coordinates match this polynomial, not table 3.4. Both are primitive. Counts 10 and 11 must retain polynomial qualifier."
+  }
+}

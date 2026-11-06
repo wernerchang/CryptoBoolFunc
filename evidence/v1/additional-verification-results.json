@@ -1,0 +1,695 @@
+{
+  "GMM_n10_t1": {
+    "observed": {
+      "balanced": true,
+      "nonlinearity": 484,
+      "resilience": 1,
+      "corrector_order": 1,
+      "degree": 8,
+      "abs_spectrum": {
+        "0": 192,
+        "8": 64,
+        "16": 224,
+        "24": 64,
+        "32": 128,
+        "40": 64,
+        "48": 224,
+        "56": 64
+      },
+      "weight_layer_sums": [
+        0,
+        0,
+        432,
+        576,
+        416,
+        -192,
+        128,
+        -576,
+        96,
+        192,
+        -48
+      ]
+    },
+    "lower_bound": 484,
+    "blocks": [
+      {
+        "free_variables": 5,
+        "prefix": 0,
+        "coefficient": 3
+      },
+      {
+        "free_variables": 5,
+        "prefix": 1,
+        "coefficient": 5
+      },
+      {
+        "free_variables": 5,
+        "prefix": 2,
+        "coefficient": 6
+      },
+      {
+        "free_variables": 5,
+        "prefix": 3,
+        "coefficient": 7
+      },
+      {
+        "free_variables": 5,
+        "prefix": 4,
+        "coefficient": 9
+      },
+      {
+        "free_variables": 5,
+        "prefix": 5,
+        "coefficient": 10
+      },
+      {
+        "free_variables": 5,
+        "prefix": 6,
+        "coefficient": 11
+      },
+      {
+        "free_variables": 5,
+        "prefix": 7,
+        "coefficient": 12
+      },
+      {
+        "free_variables": 5,
+        "prefix": 8,
+        "coefficient": 13
+      },
+      {
+        "free_variables": 5,
+        "prefix": 9,
+        "coefficient": 14
+      },
+      {
+        "free_variables": 5,
+        "prefix": 10,
+        "coefficient": 15
+      },
+      {
+        "free_variables": 5,
+        "prefix": 11,
+        "coefficient": 17
+      },
+      {
+        "free_variables": 5,
+        "prefix": 12,
+        "coefficient": 18
+      },
+      {
+        "free_variables": 5,
+        "prefix": 13,
+        "coefficient": 19
+      },
+      {
+        "free_variables": 5,
+        "prefix": 14,
+        "coefficient": 20
+      },
+      {
+        "free_variables": 5,
+        "prefix": 15,
+        "coefficient": 21
+      },
+      {
+        "free_variables": 5,
+        "prefix": 16,
+        "coefficient": 22
+      },
+      {
+        "free_variables": 5,
+        "prefix": 17,
+        "coefficient": 23
+      },
+      {
+        "free_variables": 5,
+        "prefix": 18,
+        "coefficient": 24
+      },
+      {
+        "free_variables": 5,
+        "prefix": 19,
+        "coefficient": 25
+      },
+      {
+        "free_variables": 5,
+        "prefix": 20,
+        "coefficient": 26
+      },
+      {
+        "free_variables": 5,
+        "prefix": 21,
+        "coefficient": 27
+      },
+      {
+        "free_variables": 5,
+        "prefix": 22,
+        "coefficient": 28
+      },
+      {
+        "free_variables": 5,
+        "prefix": 23,
+        "coefficient": 29
+      },
+      {
+        "free_variables": 5,
+        "prefix": 24,
+        "coefficient": 30
+      },
+      {
+        "free_variables": 5,
+        "prefix": 25,
+        "coefficient": 31
+      },
+      {
+        "free_variables": 4,
+        "prefix": 52,
+        "coefficient": 3
+      },
+      {
+        "free_variables": 4,
+        "prefix": 53,
+        "coefficient": 5
+      },
+      {
+        "free_variables": 4,
+        "prefix": 54,
+        "coefficient": 6
+      },
+      {
+        "free_variables": 4,
+        "prefix": 55,
+        "coefficient": 7
+      },
+      {
+        "free_variables": 4,
+        "prefix": 56,
+        "coefficient": 9
+      },
+      {
+        "free_variables": 4,
+        "prefix": 57,
+        "coefficient": 10
+      },
+      {
+        "free_variables": 4,
+        "prefix": 58,
+        "coefficient": 11
+      },
+      {
+        "free_variables": 4,
+        "prefix": 59,
+        "coefficient": 12
+      },
+      {
+        "free_variables": 4,
+        "prefix": 60,
+        "coefficient": 13
+      },
+      {
+        "free_variables": 4,
+        "prefix": 61,
+        "coefficient": 14
+      },
+      {
+        "free_variables": 4,
+        "prefix": 62,
+        "coefficient": 15
+      },
+      {
+        "free_variables": 3,
+        "prefix": 126,
+        "coefficient": 3
+      },
+      {
+        "free_variables": 3,
+        "prefix": 127,
+        "coefficient": 5
+      }
+    ],
+    "complete_disjoint_cover": true
+  },
+  "DS_n9_m3": {
+    "observed": {
+      "n": 9,
+      "m": 3,
+      "output_counts": {
+        "0": 64,
+        "1": 64,
+        "2": 64,
+        "3": 64,
+        "4": 64,
+        "5": 64,
+        "6": 64,
+        "7": 64
+      },
+      "min_nonlinearity": 240,
+      "min_degree": 4,
+      "max_degree": 4,
+      "components": {
+        "1": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            -32,
+            -128,
+            128,
+            576,
+            448,
+            -384,
+            0,
+            -64,
+            -32
+          ]
+        },
+        "2": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            64,
+            384,
+            320,
+            -192,
+            64,
+            -128,
+            64,
+            -64,
+            0
+          ]
+        },
+        "3": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            32,
+            192,
+            192,
+            320,
+            -256,
+            64,
+            64,
+            -64,
+            -32
+          ]
+        },
+        "4": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            32,
+            256,
+            448,
+            192,
+            -320,
+            0,
+            -192,
+            64,
+            32
+          ]
+        },
+        "5": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 1,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            0,
+            64,
+            576,
+            -192,
+            128,
+            192,
+            -192,
+            -64,
+            0
+          ]
+        },
+        "6": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            32,
+            192,
+            256,
+            64,
+            128,
+            -192,
+            128,
+            -64,
+            -32
+          ]
+        },
+        "7": {
+          "balanced": true,
+          "nonlinearity": 240,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 4,
+          "abs_spectrum": {
+            "0": 256,
+            "32": 256
+          },
+          "weight_layer_sums": [
+            0,
+            64,
+            384,
+            512,
+            -64,
+            -576,
+            128,
+            0,
+            64,
+            0
+          ]
+        }
+      }
+    },
+    "seed": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      2
+    ],
+    "R": "I_3",
+    "field_polynomial": "x^3+x+1"
+  },
+  "fragmentary": {
+    "parts": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "partial_spectra": [
+      [
+        -1,
+        1,
+        1,
+        3,
+        -1,
+        1,
+        1,
+        3
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -3,
+        1,
+        -1,
+        -1,
+        5
+      ]
+    ],
+    "full_spectrum": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8
+    ],
+    "per_block_zero_not_necessary": true
+  },
+  "coordinate_only_false_positive": {
+    "F": [
+      0,
+      3,
+      0,
+      3
+    ],
+    "observed": {
+      "n": 2,
+      "m": 2,
+      "output_counts": {
+        "0": 2,
+        "3": 2
+      },
+      "min_nonlinearity": 0,
+      "min_degree": 0,
+      "max_degree": 1,
+      "components": {
+        "1": {
+          "balanced": true,
+          "nonlinearity": 0,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 1,
+          "abs_spectrum": {
+            "0": 3,
+            "4": 1
+          },
+          "weight_layer_sums": [
+            0,
+            4,
+            0
+          ]
+        },
+        "2": {
+          "balanced": true,
+          "nonlinearity": 0,
+          "resilience": 0,
+          "corrector_order": 0,
+          "degree": 1,
+          "abs_spectrum": {
+            "0": 3,
+            "4": 1
+          },
+          "weight_layer_sums": [
+            0,
+            4,
+            0
+          ]
+        },
+        "3": {
+          "balanced": false,
+          "nonlinearity": 0,
+          "resilience": -1,
+          "corrector_order": -1,
+          "degree": 0,
+          "abs_spectrum": {
+            "0": 3,
+            "4": 1
+          },
+          "weight_layer_sums": [
+            4,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "unequal_bias": {
+    "biases": [
+      "1/10",
+      "1/5",
+      "3/10",
+      "2/5"
+    ],
+    "exact_bias": "3/100",
+    "multivariate_Walsh_bias": "3/100",
+    "same_bias_layer_rule_applicable": false
+  },
+  "zero_transport_n8": {
+    "delta": 1,
+    "R_rows": [
+      3,
+      5,
+      4,
+      9,
+      17,
+      33,
+      65,
+      129
+    ],
+    "source_hex": "6EE1562C722C95277A0C05D31726A9D17A886AC80573E8D8962E853789D368D1",
+    "observed": {
+      "balanced": true,
+      "nonlinearity": 116,
+      "resilience": 1,
+      "corrector_order": 1,
+      "degree": 6,
+      "abs_spectrum": {
+        "0": 18,
+        "8": 66,
+        "16": 118,
+        "24": 54
+      },
+      "weight_layer_sums": [
+        0,
+        0,
+        256,
+        16,
+        -16,
+        -32,
+        32,
+        16,
+        -16
+      ]
+    }
+  },
+  "normality_n4": {
+    "linear_2spaces": 35,
+    "regular_cosets": [
+      [
+        0,
+        1,
+        4,
+        5
+      ],
+      [
+        0,
+        1,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        4,
+        6
+      ],
+      [
+        0,
+        2,
+        8,
+        10
+      ],
+      [
+        0,
+        5,
+        10,
+        15
+      ],
+      [
+        0,
+        6,
+        9,
+        15
+      ],
+      [
+        1,
+        2,
+        5,
+        6
+      ],
+      [
+        1,
+        2,
+        9,
+        10
+      ],
+      [
+        1,
+        4,
+        10,
+        15
+      ],
+      [
+        1,
+        6,
+        8,
+        15
+      ],
+      [
+        2,
+        4,
+        9,
+        15
+      ],
+      [
+        2,
+        5,
+        8,
+        15
+      ],
+      [
+        4,
+        5,
+        8,
+        9
+      ],
+      [
+        4,
+        6,
+        8,
+        10
+      ],
+      [
+        5,
+        6,
+        9,
+        10
+      ]
+    ],
+    "pruned_matches_naive": true
+  },
+  "sequence_n4": {
+    "cross_pairs_checked": 256,
+    "max_absolute_aligned_correlation": 4,
+    "cyclic_shifts_tested": false
+  }
+}
